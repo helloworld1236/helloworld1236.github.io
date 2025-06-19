@@ -1,8 +1,19 @@
 <body>
+  <!-- 🔥 Intro animation -->
+  <div id="intro">
+    <h1 class="intro-text">WILL SANTANA</h1>
+  </div>
+
+  <!-- 💥 Hero section with background -->
   <div class="hero">
     <div class="overlay">
       <h1>Will Santana</h1>
       <p>Mechanical Engineering @ UC Berkeley</p>
+
+      <!-- 🔽 Scroll link to About Me -->
+      <a href="#about" class="scroll-down">↓ Learn More</a>
+
+      <!-- 🔗 Resume + LinkedIn links -->
       <div class="hero-links">
         <a href="resume.pdf" target="_blank">Resume</a>
         <a href="https://www.linkedin.com/in/will-santana-631b1b310/" target="_blank">LinkedIn</a>
@@ -10,9 +21,23 @@
     </div>
   </div>
 
+  <!-- 👤 About Me Section -->
+  <section class="about" id="about">
+    <div class="about-container">
+      <img src="IMG_5071.jpg" alt="Will Santana" class="about-pic">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I’m a first-year Mechanical Engineering student at UC Berkeley passionate about hands-on design, robotics, and renewable energy. I love building things that solve real-world problems — whether it’s fabricating parts for a student motorcycle team or researching experimental propulsion with NASA. My work blends CAD, machining, coding, and curiosity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧩 Sidebar + Main Content -->
   <div class="container">
     <aside>
-     <img src="IMG_5071.jpg" alt="Will Santana" style="width:140px; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
+      <img src="IMG_5071.jpg" alt="Will Santana" style="width:140px; border-radius: 50%; margin-bottom: 20px; box-shadow: 0 0 8px rgba(0,0,0,0.2);">
       <h1>Will Santana</h1>
       <p>San Diego, CA</p>
       <p><a href="mailto:dwilliamsantana@gmail.com">dwilliamsantana@gmail.com</a></p>
@@ -23,6 +48,9 @@
       </div>
       <a class="resume-button" href="resume.pdf" target="_blank">Download Resume</a>
     </aside>
+
+
+
 
     <main>
       <section>
@@ -59,6 +87,8 @@
         </ul>
       </section>
 
+      
+
       <section>
         <h2>Research</h2>
         <ul>
@@ -66,6 +96,8 @@
           <li><strong>NASA Proposal Support</strong>: Working with Sara Adibi on aerospace-focused CFD research</li>
         </ul>
       </section>
+
+      
 
       <section>
         <h2>Skills</h2>
@@ -77,6 +109,8 @@
         </ul>
       </section>
 
+
+      
       <section>
         <h2>Leadership</h2>
         <ul>
@@ -85,58 +119,155 @@
           <li>Passionate about community-centered design</li>
         </ul>
       </section>
+
+      
     </main>
   </div>
 </body>
-✅ Then add this CSS at the top inside <style> (after your existing styles):
-css
-Copy
-Edit
-.hero {
-  background: url('bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
+
+
+<style>
+
+  /* 🌟 ABOUT ME SECTION STYLES */
+.about {
+  padding: 100px 20px;
+  background: #fff;
   display: flex;
   justify-content: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  color: white;
-  animation: fadeIn 2s ease-in-out;
+/* 👤 Profile picture */
+.about-pic {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.overlay h1 {
-  font-size: 48px;
-  margin: 0 0 10px;
+/* ✏️ Text area */
+.about-text {
+  flex: 1;
+  min-width: 250px;
 }
 
-.overlay p {
-  font-size: 20px;
-  margin-bottom: 20px;
+.about-text h2 {
+  font-size: 32px;
+  color: #004466;
+  margin-bottom: 15px;
 }
 
-.hero-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-  border: 2px solid white;
-  padding: 8px 16px;
-  border-radius: 5px;
-  transition: background 0.3s;
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
 }
+ /* 🌟 ABOUT ME SECTION STYLES */
 
-.hero-links a:hover {
-  background: white;
-  color: #000;
-}
+  
+  
+  /* Intro splash animation */
+  #intro {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    animation: fadeOut 1.6s ease 2.5s forwards;
+  }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  .intro-text {
+    font-size: 70px;
+    font-weight: 900;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    letter-spacing: 8px;
+    opacity: 0;
+    animation: fadeInText 1.2s ease-out forwards;
+  }
+
+  @keyframes fadeInText {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+      letter-spacing: 3px;
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+      letter-spacing: 8px;
+    }
+  }
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  /* Hero section */
+  .hero {
+    background: url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  .overlay h1 {
+    font-size: 48px;
+    margin: 0 0 10px;
+    color: white;
+  }
+
+  .overlay p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #eee;
+  }
+
+  .hero-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .hero-links a:hover {
+    background: white;
+    color: #000;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
