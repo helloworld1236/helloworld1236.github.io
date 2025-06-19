@@ -22,12 +22,13 @@
       <h1>Will Santana</h1>
       <p>Mechanical Engineering at UC Berkeley</p>
 
-      <!-- 📍 Contact info -->
-      <p>📍 San Diego, CA</p>
-      <p>📞 619-609-1697</p>
-      <p style="margin-bottom: 20px;">
-  <a href="mailto:dwilliamsantana@gmail.com" style="color: white;">dwilliamsantana@gmail.com</a>
-</p>
+     <!-- 📬 Contact Form -->
+<form action="https://formspree.io/f/moqgrrnn" method="POST" class="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
       
 
       <!-- 🔗 Resume + LinkedIn -->
@@ -574,6 +575,46 @@ body {
     font-size: 16px;
     padding: 6px 12px;
   }
+}
+
+
+
+  .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  margin: 20px auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #444;
+  color: white;
 }
 
   
