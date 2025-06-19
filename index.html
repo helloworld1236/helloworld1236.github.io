@@ -6,17 +6,15 @@
   </div>
 
   <!-- 🔗 Sticky Navbar -->
-  <nav class="navbar">
-    <div class="nav-left">Will Santana</div>
-    <div class="nav-right">
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#research">Research</a>
-      <a href="#skills">Skills</a>
-      <a href="#leadership">Leadership</a>
-    </div>
-  </nav>
+<!-- 🔗 Custom Navigation Bar under Hero -->
+<nav class="custom-navbar">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#research">Research</a>
+  <a href="#skills">Skills</a>
+  <a href="#leadership">Leadership</a>
+</nav>
 
   <!-- 💥 Hero Section -->
   <div class="hero">
@@ -28,9 +26,7 @@
       <p>📍 San Diego, CA</p>
       <p>📞 619-609-1697</p>
       <p><a href="mailto:dwilliamsantana@gmail.com" style="color: white;">dwilliamsantana@gmail.com</a></p>
-
-      <!-- 🔽 Scroll link -->
-      <a href="#about" class="scroll-down">↓ Learn More</a>
+      
 
       <!-- 🔗 Resume + LinkedIn -->
       <div class="hero-links">
@@ -468,6 +464,33 @@ section ul {
   display: inline-block;
   text-align: left;
   padding-left: 20px;
+}
+
+  /* 🧭 Custom navbar below Hero */
+.custom-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #004466;
+  padding: 15px 0;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: 2px solid white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar a:hover {
+  background-color: white;
+  color: #004466;
 }
 
   @keyframes fadeIn {
