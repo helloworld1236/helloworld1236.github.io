@@ -1,12 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will Santana | Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background: #444;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 2rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .contact a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, I'm Will Santana</h1>
-  <p>Welcome to my website.</p>
+
+<header>
+  <h1>Will Santana</h1>
+  <p>Developer • Engineer • Problem Solver</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm a passionate developer and engineer who loves building clean, efficient systems and exploring emerging tech. Whether it's robotics, software, or control systems, I'm always up for a challenge.
+  </p>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <ul>
+    <li><strong>Intern – XYZ Robotics Inc.</strong> (Summer 2024)<br>
+    Worked on firmware for motor control and improved testing efficiency by 40%.</li>
+    <li><strong>Freelance Developer</strong> (2023–present)<br>
+    Built custom websites and automation tools for small businesses.</li>
+  </ul>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Self-Balancing Robot:</strong> Arduino + IMU + PID loop to stay upright.</li>
+    <li><strong>Portfolio Website:</strong> This site! Hosted on GitHub Pages.</li>
+    <li><strong>Drone Telemetry Dashboard:</strong> Real-time graphing via WebSockets.</li>
+  </ul>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <p>GitHub: <a href="https://github.com/helloworld1236" target="_blank">helloworld1236</a></p>
+  <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Will Santana. All rights reserved.
+</footer>
+
 </body>
 </html>
-
