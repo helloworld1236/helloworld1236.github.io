@@ -161,7 +161,8 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  background-color: black;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
 }
   
 
@@ -306,15 +307,17 @@ html, body {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
-/* 👤 Profile picture */
 .about-pic {
   width: 220px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px; /* optional: slight round corners */
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 /* ✏️ Text area */
