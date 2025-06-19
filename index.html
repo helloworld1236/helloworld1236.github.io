@@ -95,7 +95,7 @@
   </div>
 </section>
 
-<section id="education" class="section-block">
+<section id="education" class="fade-in-section">
   <h2 class="section-title">Education</h2>
   <div class="education-entry">
     <div class="school-header">
@@ -112,7 +112,7 @@
   </div>
 </section>
 
-<section id="research">
+<section id="research" class="fade-in-section">
   <h2 class="section-title">Research</h2>
   <ul>
     <li><strong>SDSU Camacho Lab</strong>: Researching flame synthesis – <a href="https://engineering.sdsu.edu/camacho/research.html" target="_blank">View Lab</a></li>
@@ -120,7 +120,7 @@
   </ul>
 </section>
 
-<section id="skills">
+<section id="skills" class="fade-in-section">
   <h2 class="section-title">Skills</h2>
   <ul>
     <li>CAD: SolidWorks, Onshape, Fusion 360</li>
@@ -130,7 +130,7 @@
   </ul>
 </section>
 
-<section id="leadership">
+<section id="leadership" class="fade-in-section">
   <h2 class="section-title">Leadership</h2>
   <ul>
     <li>Eagle Scout – Boy Scouts of America (2022)</li>
@@ -505,6 +505,34 @@ section ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+  #education {
+  background-color: #fdfdfd;
+}
+
+#research {
+  background-color: #f9f9ff;
+}
+
+#skills {
+  background-color: #f7fcff;
+}
+
+#leadership {
+  background-color: #fffaf5;
+}
+
+  /* ✨ Fade-in animation */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
@@ -513,3 +541,25 @@ section ul {
 
   
 </style>
+
+      <!-- Fade-in Scroll Script -->
+<script>
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
