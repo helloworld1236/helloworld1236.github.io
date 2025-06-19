@@ -339,8 +339,8 @@
   color: white;
   letter-spacing: 8px;
   opacity: 0;
-  animation: fadeInText 1.2s ease-out forwards;
-  text-shadow: 0 0 20px rgba(200, 200, 200, 0.8); /* 👈 Grey glow */
+  animation: glowSlideIn 1.4s ease-out 0.5s forwards; /* 👈 changed to glowSlideIn */
+  text-shadow: 0 0 20px rgba(200, 200, 200, 0.8);
 }
 
 @keyframes glowSlideIn {
@@ -535,10 +535,11 @@ section ul {
 
 
   /* 🔲 Remove default white border/margin/padding */
-* {
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black; /* match hero bg */
 }
 
 body {
