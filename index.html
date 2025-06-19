@@ -20,7 +20,7 @@
   <div class="hero">
     <div class="overlay">
       <h1>Will Santana</h1>
-      <p>Mechanical Engineering @ UC Berkeley</p>
+      <p>Mechanical Engineering at UC Berkeley</p>
 
       <!-- 📍 Contact info -->
       <p>📍 San Diego, CA</p>
@@ -99,7 +99,7 @@
   <h2 class="section-title">Education</h2>
   <div class="education-entry">
     <div class="school-header">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/UC_Berkeley_logo.svg/2560px-UC_Berkeley_logo.svg.png" alt="UC Berkeley Logo">
+      <img src="UCB-seal.jpg" alt="UC Berkeley Logo">
       <div>
         <h3>UC Berkeley</h3>
         <p>B.S. in Mechanical Engineering (Expected May 2028)</p>
@@ -493,8 +493,23 @@ section ul {
   color: #004466;
 }
 
+  .custom-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #004466;
+  padding: 15px 0;
+  position: sticky;  /* 👈 Add this line */
+  top: 0;            /* 👈 And this line */
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
   }
+
+  
 </style>
