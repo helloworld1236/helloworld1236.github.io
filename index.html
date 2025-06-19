@@ -481,9 +481,10 @@ section ul {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: #444;
+  background-color: #444 !important; /* <-- Force dark gray */
   padding: 15px 0;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -500,21 +501,10 @@ section ul {
 
 .custom-navbar a:hover {
   background-color: white;
-  color: #004466;
+  color: #444;
 }
 
-  .custom-navbar {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: #004466;
-  padding: 15px 0;
-  position: sticky;  /* 👈 Add this line */
-  top: 0;            /* 👈 And this line */
-  z-index: 10;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+  
   #education {
   background-color: #fdfdfd;
 }
