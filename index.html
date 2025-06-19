@@ -2,137 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Will Santana | Mechanical Engineering Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Will Santana | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
       color: #333;
     }
-    header {
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    aside {
+      width: 250px;
       background: #004466;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      color: white;
+      padding: 30px 20px;
+      flex-shrink: 0;
+    }
+    aside h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    aside p {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    aside a {
+      color: white;
+      text-decoration: none;
+    }
+    aside .icons {
+      margin-top: 20px;
+    }
+    aside .icons a {
+      margin-right: 10px;
+      font-size: 18px;
+      color: white;
     }
     main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      flex-grow: 1;
+      padding: 40px 30px;
     }
     h2 {
       color: #004466;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
     }
-    .section {
+    section {
       margin-bottom: 30px;
     }
     ul {
-      list-style-type: disc;
       margin-left: 20px;
     }
-    .contact {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 14px;
-    }
-    a {
-      color: #004466;
+    .resume-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #004466;
+      color: white;
       text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+    .resume-button:hover {
+      background: #006080;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Will Santana</h1>
-    <p>San Diego, CA | 619-609-1697 | <a href="mailto:dwilliamsantana@gmail.com">dwilliamsantana@gmail.com</a></p>
-  </header>
+  <div class="container">
+    <aside>
+      <h1>Will Santana</h1>
+      <p>San Diego, CA</p>
+      <p><a href="mailto:dwilliamsantana@gmail.com">dwilliamsantana@gmail.com</a></p>
+      <p>📞 619-609-1697</p>
+      <div class="icons">
+        <a href="resume.pdf" target="_blank"><i class="fas fa-file-download"></i></a>
+        <a href="https://www.linkedin.com/in/will-santana-631b1b310/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <a class="resume-button" href="resume.pdf" target="_blank">Download Resume</a>
+    </aside>
 
-  <main>
-    <div class="section">
-      <h2>Education</h2>
-      <p><strong>University of California, Berkeley</strong> – B.S. in Mechanical Engineering, Expected May 2028</p>
-      <ul>
-        <li>First-year undergraduate interested in robotics, renewable energy, materials, and aerospace</li>
-        <li>Relevant Coursework: CAD & Design, Engineering Graphics, Intro to Mechanics</li>
-      </ul>
-    </div>
+    <main>
+      <section>
+        <h2>Education</h2>
+        <p><strong>UC Berkeley</strong> – B.S. Mechanical Engineering, Expected May 2028</p>
+        <ul>
+          <li>First-year student interested in robotics, renewable energy, materials, and aerospace</li>
+          <li>Relevant Coursework: CAD & Design, Engineering Graphics, Intro to Mechanics</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Projects & Experience</h2>
-      <p><strong>MotoStudent Sports Team – UC Berkeley</strong> (2024–Present)<br />
-        Design & Fabrication Member</p>
-      <ul>
-        <li>Contributed to design and manufacturing of a fully functional motorcycle</li>
-        <li>Created CAD models and assisted with machining and assembly</li>
-      </ul>
+      <section>
+        <h2>Projects & Experience</h2>
+        <p><strong>MotoStudent Sports Team</strong> – UC Berkeley (2024–Present)</p>
+        <ul>
+          <li>Helped design and manufacture a functional motorcycle</li>
+          <li>Created CAD models, supported machining and assembly</li>
+        </ul>
 
-      <p><strong>CAD Wind Turbine Project – UC Berkeley</strong> (2024)<br />
-        Course Project</p>
-      <ul>
-        <li>Designed and 3D printed a functional wind turbine using SolidWorks</li>
-        <li>Emphasized manufacturing feasibility and aerodynamic efficiency</li>
-      </ul>
+        <p><strong>CAD Wind Turbine Project</strong> – UC Berkeley (2024)</p>
+        <ul>
+          <li>Designed and 3D printed a wind turbine using SolidWorks</li>
+          <li>Focused on design for manufacturing and aerodynamics</li>
+        </ul>
 
-      <p><strong>Sustainable Energy Capstone – High School</strong> (2023)<br />
-        Lead Designer</p>
-      <ul>
-        <li>Led an engineering project addressing environmental sustainability</li>
-        <li>Built a working prototype focused on renewable energy</li>
-      </ul>
+        <p><strong>Sustainable Energy Capstone</strong> – High School (2023)</p>
+        <ul>
+          <li>Led a team to build a prototype for clean energy</li>
+        </ul>
 
-      <p><strong>Robotics Team – High School</strong> (2020–2024)<br />
-        Machinist & Team Member</p>
-      <ul>
-        <li>Operated mill, lathe, bandsaw, and other shop tools</li>
-        <li>Collaborated to prototype and build competition-ready robots</li>
-      </ul>
-    </div>
+        <p><strong>Robotics Team</strong> – High School (2020–2024)</p>
+        <ul>
+          <li>Operated mills, lathes, and other shop tools for robot building</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>CAD: SolidWorks, Onshape, Fusion 360</li>
-        <li>Software: Python, MATLAB, Microsoft Office</li>
-        <li>Fabrication: Mill, lathe, bandsaw, 3D printing</li>
-        <li>Basic electronics</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Research</h2>
+        <ul>
+          <li><strong>SDSU Camacho Lab</strong>: Researching flame synthesis – <a href="https://engineering.sdsu.edu/camacho/research.html" target="_blank">View Lab</a></li>
+          <li><strong>NASA Proposal Support</strong>: Working with Sara Adibi on aerospace-focused CFD research</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Leadership & Outreach</h2>
-      <ul>
-        <li>Eagle Scout – Boy Scouts of America (2022)</li>
-        <li>Passionate about increasing Latino representation in STEM</li>
-        <li>Focus on hands-on problem-solving and community-centered design</li>
-      </ul>
-    </div>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>CAD: SolidWorks, Onshape, Fusion 360</li>
+          <li>Programming: Python, MATLAB</li>
+          <li>Tools: Mill, lathe, bandsaw, 3D printing</li>
+          <li>Basic electronics</li>
+        </ul>
+      </section>
 
-    <div class="section">
-      <h2>Research</h2>
-      <ul>
-        <li><strong>SDSU Camacho Lab</strong>: Assisting with flame synthesis research – <a href="https://engineering.sdsu.edu/camacho/research.html" target="_blank">View Lab</a></li>
-        <li><strong>NASA Proposal Support</strong>: Working with Sara Adibi on aerospace-focused CFD proposal development</li>
-      </ul>
-    </div>
-  </main>
-
-  <div class="contact">
-    <p>
-  <a href="Will_Santana_Resume.pdf" target="_blank">Resume</a> |
-  <a href="https://www.linkedin.com/in/will-santana-631b1b310" target="_blank">LinkedIn</a>
-</p>
-<p>&copy; 2025 Will Santana | UC Berkeley ME</p>
+      <section>
+        <h2>Leadership</h2>
+        <ul>
+          <li>Eagle Scout – Boy Scouts of America (2022)</li>
+          <li>Advocate for Latino representation in STEM</li>
+          <li>Passionate about community-centered design</li>
+        </ul>
+      </section>
+    </main>
   </div>
 </body>
 </html>
