@@ -1,91 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Will Santana | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      color: #333;
-    }
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
-    aside {
-      width: 250px;
-      background: #004466;
-      color: white;
-      padding: 30px 20px;
-      flex-shrink: 0;
-    }
-    aside h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    aside p {
-      font-size: 14px;
-      margin: 4px 0;
-    }
-    aside a {
-      color: white;
-      text-decoration: none;
-    }
-    aside .icons {
-      margin-top: 20px;
-    }
-    aside .icons a {
-      margin-right: 10px;
-      font-size: 18px;
-      color: white;
-    }
-    main {
-      flex-grow: 1;
-      padding: 40px 30px;
-    }
-    h2 {
-      color: #004466;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    .resume-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 18px;
-      background: #004466;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .resume-button:hover {
-      background: #006080;
-    }
-
-    @media screen and (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-      aside {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
 <body>
+  <div class="hero">
+    <div class="overlay">
+      <h1>Will Santana</h1>
+      <p>Mechanical Engineering @ UC Berkeley</p>
+      <div class="hero-links">
+        <a href="resume.pdf" target="_blank">Resume</a>
+        <a href="https://www.linkedin.com/in/will-santana-631b1b310/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <aside>
+      <img src="me.jpg" alt="Will Santana" style="width:120px; border-radius: 50%; margin-bottom: 20px;">
       <h1>Will Santana</h1>
       <p>San Diego, CA</p>
       <p><a href="mailto:dwilliamsantana@gmail.com">dwilliamsantana@gmail.com</a></p>
@@ -161,4 +88,55 @@
     </main>
   </div>
 </body>
-</html>
+✅ Then add this CSS at the top inside <style> (after your existing styles):
+css
+Copy
+Edit
+.hero {
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  margin: 0 0 10px;
+}
+
+.overlay p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 10px;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero-links a:hover {
+  background: white;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
