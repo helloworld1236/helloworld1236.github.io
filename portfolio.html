@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio – Will Santana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand:#004466;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f6f7fb;
+      --shadow:0 10px 25px rgba(0,0,0,0.08);
+      --radius:14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Navbar */
+    .custom-navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      background: #444;
+      padding: 14px 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .custom-navbar a {
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-weight: 700;
+    }
+
+    .custom-navbar a:hover {
+      background: #fff;
+      color: #444;
+    }
+
+    /* Header */
+    header {
+      max-width: 1100px;
+      margin: 40px auto 10px;
+      padding: 0 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin: 6px 0;
+      color: var(--brand);
+    }
+
+    header p {
+      color: var(--muted);
+      margin: 6px 0;
+    }
+
+    /* Sections */
+    .section {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 16px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin: 22px 0;
+      color: var(--brand);
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .thumb {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      background: #e5e7eb;
+    }
+
+    .body {
+      padding: 16px;
+    }
+
+    .body h3 {
+      margin: 0 0 6px 0;
+      font-size: 20px;
+      color: var(--brand);
+    }
+
+    .meta {
+      margin: 2px 0 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .desc {
+      margin: 8px 0 10px 0;
+      font-size: 15px;
+      color: #374151;
+    }
+
+    .list {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+
+    .list li {
+      margin: 4px 0;
+    }
+
+    .links {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .tags {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="custom-navbar">
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Portfolio</h1>
+    <p>Selected work across student teams, research, and courses.</p>
+  </header>
+
+  <!-- UC Berkeley FASE -->
+  <section class="section" id="fase">
+    <h2>UC Berkeley FASE</h2>
+    <div class="grid">
+
+      <!-- Steering Rack -->
+      <article class="card">
+        <img class="thumb" src="images/fase-steering-rack.jpg" alt="FASE steering rack">
+        <div class="body">
+          <h3>Steering Rack</h3>
+          <p class="meta">Role: CAD, Manufacturing Support | 2025</p>
+          <p class="desc">Design updates for packaging, stiffness, and serviceability.</p>
+          <ul class="list">
+            <li>Modeled housing and mounts to meet chassis constraints.</li>
+            <li>Planned fits and tolerances for bearings and seals.</li>
+            <li>Prepared drawings for shop fabrication.</li>
+          </ul>
+          <p class="links">Links: add GitHub, photos, or PDF</p>
+          <p class="tags">Tools: SolidWorks, GD&T</p>
+        </div>
+      </article>
+
+      <!-- Shock Dyno -->
+      <article class="card">
+        <img class="thumb" src="images/fase-shock-dyno.jpg" alt="Shock dyno">
+        <div class="body">
+          <h3>Shock Dyno</h3>
+          <p class="meta">Role: Design, Jig Build, Sensors | 2025</p>
+          <p class="desc">Bench-top damper dyno for characterization and tuning.</p>
+          <ul class="list">
+            <li>Built welding jig and sensor mounts.</li>
+            <li>Integrated FUTEK load cell with data workflow.</li>
+            <li>Aimed for repeatability and faster test cycles.</li>
+          </ul>
+          <p class="links">Links: add report, workflow, or video</p>
+          <p class="tags">Tools: SolidWorks, FUTEK, MATLAB</p>
+        </div>
+      </article>
+
+      <!-- Welding Jigs -->
+      <article class="card">
+        <img class="thumb" src="images/fase-welding-jigs.jpg" alt="Welding jigs and fixtures">
+        <div class="body">
+          <h3>Welding Jigs and Jig Manufacturing</h3>
+          <p class="meta">Role: Fixture Design, Fabrication | 2025</p>
+          <p class="desc">Fixtures for accurate and repeatable assemblies.</p>
+          <ul class="list">
+            <li>Designed locators and clamps for frame parts.</li>
+            <li>Checked stack-up and weld access.</li>
+            <li>Documented setup for future builds.</li>
+          </ul>
+          <p class="links">Links: add photos or drawings</p>
+          <p class="tags">Tools: SolidWorks, Shop Tools</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</body>
+</html>
